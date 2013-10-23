@@ -21,7 +21,7 @@ int main() {
     fread(s, sizeof(short), N, wav);
 
     for(n = 0;n < N;n++) {
-        for(k = 0;k < n;k++) {
+        for(k = 0;k < N;k++) {
             theta = 2 * PI * (double)(n*k) / (double)N;
             Sr[n] += (double)s[k] * cos(theta);
             Si[n] -= (double)s[k] * sin(theta);
